@@ -7,6 +7,10 @@ module.exports = {
         body: "rgba(221,221,221, 0.87)",
         purple: "rgba(202, 3, 252, 0.3)",
       },
+      fontFamily: {
+        primary: ["Montserrat", "sans-serif"],
+        second: ["Mukta", "sans-serif"],
+      },
     },
   },
   plugins: [],
