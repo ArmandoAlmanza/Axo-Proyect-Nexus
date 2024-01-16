@@ -9,4 +9,8 @@ import { matHome, matPerson2 } from '@ng-icons/material-icons/baseline';
   templateUrl: './landing-page.component.html',
   viewProviders: [provideIcons({ matHome, matPerson2 })],
 })
-export class LandingPageComponent {}
+export class LandingPageComponent {
+  message() {
+    console.log('Hellooooooooo');
+  }
+}
