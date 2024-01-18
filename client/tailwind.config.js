@@ -6,8 +6,8 @@ export default {
             colors: {
                 nav_bg: "rgba(0, 0, 0, 0.75)",
                 body: "rgba(221,221,221, 0.87)",
-                purple: "rgba(202, 3, 252, 0.651)",
-                "purple-light": "rgba(202, 3, 252, 0.3)",
+                purple: "rgba(202, 3, 252, 0.38)",
+                "purple-light": "#B2A4FF",
             },
             fontFamily: {
                 primary: ["Montserrat", "sans-serif"],
