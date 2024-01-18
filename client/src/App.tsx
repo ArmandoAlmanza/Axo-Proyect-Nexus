@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaBook, FaUsers, FaRegPaperPlane, FaBriefcase } from "react-icons/fa6";
+import { FaUsers, FaRegPaperPlane, FaBriefcase } from "react-icons/fa6";
 import useScreenScroll from "./hooks/useScreenScroll";
 import Footer from "./components/Footer";
 

@@ -11,21 +11,21 @@ const Footer = () => {
             </h2>
             <nav className="flex flex-row justify-between gap-3">
                 <a
-                    className="text-xl transition-colors hover:text-purple duration-300"
+                    className="text-xl transition-colors hover:text-purple-light duration-300"
                     href="https://github.com/ArmandoAlmanza"
                     target="_blank"
                 >
                     <FaGithub />
                 </a>
                 <a
-                    className="text-xl transition-colors hover:text-purple duration-300"
+                    className="text-xl transition-colors hover:text-purple-light duration-300"
                     href="https://github.com/ArmandoAlmanza"
                     target="_blank"
                 >
                     <FaInstagram />
                 </a>
                 <a
-                    className="text-xl transition-colors hover:text-purple duration-300"
+                    className="text-xl transition-colors hover:text-purple-light duration-300"
                     href="https://github.com/ArmandoAlmanza"
                     target="_blank"
                 >
