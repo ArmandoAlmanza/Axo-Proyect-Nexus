@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Mukta:wght@300;400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    --sb-track-color: #c7c7c7;
+    --sb-thumb-color: #795486;
+    --sb-size: 5px;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+}
+
+.shadow-header {
+    background-color: #d4d4d4;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12);
+}
+.b {
+    background: linear-gradient(
+        90deg,
+        rgba(202, 3, 252, 0.3),
+        rgba(252, 61, 3, 0)
+    );
+}
+.b_alt {
+    background: linear-gradient(
+        90deg,
+        rgba(85, 83, 85, 1),
+        rgba(252, 61, 3, 0)
+    );
+}
+
+.pending {
+    color: yellow;
+}
+
+.completed {
+    color: green;
+}
+
+.canceled {
+    color: red;
+}
+
+.general {
+    background-image: url("/general.jpg");
+}
+
+.history {
+    background-image: url("/history.jpg");
+}
+
+.biology {
+    background-image: url("/biology.jpg");
+}
+.chemestry {
+    background-image: url("/chemestry.jpg");
+}
