@@ -25,12 +25,12 @@ function App() {
             <header
                 className={`${
                     screenScroll >= 50
-                        ? "bg-[#d4d4d4] shadow-[0_1px_16px_rgba(0, 0, 0, 0.12)] z-10"
+                        ? "bg-[#f0f0f0] shadow-[0_1px_16px_rgba(0, 0, 0, 0.12)] z-10"
                         : "bg-body"
                 } sticky top-0 flex flex-row justify-evenly gap-3 p-4 border-b border-b-black content-center items-center transition-[colors,shadow] duration-300`}
             >
                 <h1 className="text-3xl font-bold">
-                    <span className="text-violet-400">Axo</span> Proyect{" "}
+                    <span className="text-violet-400">Axo</span> Project{" "}
                     <span className="text-pink-600">Nexus</span>
                 </h1>
 

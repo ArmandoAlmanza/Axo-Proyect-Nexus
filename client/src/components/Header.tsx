@@ -18,7 +18,7 @@ const Header = () => {
             } sticky top-0 flex flex-row justify-between p-4 border-b border-b-black content-center items-center md:flex-col md:justify-evenly md:items-start md:border-b-0 md:border-r md:border-r-black md:w-60`}
         >
             <h1 className="text-3xl font-bold">
-                <span className="text-violet-400">Axo</span> Proyect{" "}
+                <span className="text-violet-400">Axo</span> Project{" "}
                 <span className="text-pink-600">Nexus</span>
             </h1>
             <button
