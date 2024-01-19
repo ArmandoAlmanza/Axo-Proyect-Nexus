@@ -1,0 +1,30 @@
+{
+    "leader": "Armando Almanza",
+    "Members": [
+        {
+            "name": "Armando Almanza",
+            "email": "armando.s.almanza@gmail.com",
+            "rol": "leader"
+        },
+        {
+            "name": "Ana Pomposo",
+            "email": "ana@gmail.com",
+            "rol": "participant"
+        },
+        {
+            "name": "Jesús Chavez",
+            "email": "ana@gmail.com",
+            "rol": "participant"
+        },
+        {
+            "name": "Itzel Geraldine",
+            "email": "ana@gmail.com",
+            "rol": "participant"
+        },
+        {
+            "name": "Ximena Maldonado",
+            "email": "ana@gmail.com",
+            "rol": "participant"
+        }
+    ]
+}

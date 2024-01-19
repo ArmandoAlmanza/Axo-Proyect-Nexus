@@ -8,26 +8,25 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    --sb-track-color: #c7c7c7;
-    --sb-thumb-color: #795486;
-    --sb-size: 5px;
-
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-}
-
+/* width */
 ::-webkit-scrollbar {
-    width: var(--sb-size);
+    width: 6px;
 }
 
+/* Track */
 ::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 10px;
+    background: #f1f1f1;
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 10px;
+    background: #c28cff;
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #956cc4;
 }
 
 .shadow-header {
@@ -49,29 +48,21 @@ body {
     );
 }
 
-.pending {
-    color: yellow;
+.started {
+    background-color: blue;
 }
 
 .completed {
-    color: green;
+    background-color: green;
 }
 
 .canceled {
-    color: red;
+    background-color: red;
+}
+.in_progress {
+    background-color: yellow;
 }
 
-.general {
-    background-image: url("/general.jpg");
-}
-
-.history {
-    background-image: url("/history.jpg");
-}
-
-.biology {
-    background-image: url("/biology.jpg");
-}
-.chemestry {
-    background-image: url("/chemestry.jpg");
+.active {
+    color: rgba(124, 58, 237, 1);
 }
