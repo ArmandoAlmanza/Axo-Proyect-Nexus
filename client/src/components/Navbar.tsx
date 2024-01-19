@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Dispatch, SetStateAction } from "react";
-import { FaTimes } from "react-icons/fa";
+import { FaHome, FaTimes, FaUserTimes } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa6";
 
 interface NavProps {
     navOpened: boolean;
@@ -9,9 +10,9 @@ interface NavProps {
 
 const Navbar = ({ navOpened, setNavOpened }: NavProps) => {
     const links = [
-        { title: "Home", path: "/dashboard" },
-        { title: "Profile", path: "/dashboard" },
-        { title: "Log Out", path: "/auth" },
+        { title: "Home", path: "/dashboard", icon: <FaHome /> },
+        { title: "Profile", path: "/dashboard", icon: <FaBriefcase />  },
+        { title: "Log Out", path: "/auth", icon: <FaUserTimes />  },
     ];
     const displayState = navOpened ? "top-0" : "-top-full";
     return (
@@ -31,12 +32,13 @@ const Navbar = ({ navOpened, setNavOpened }: NavProps) => {
             </span>
             {links.map((link, i) => (
                 <Link
-                    className="relative mx-auto text-gray-200 font-semibold text-xl transition-colors duration-300 after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 after:transition-[width] after:duration-300 hover:text-white hover:after:w-5 md:after:bg-black md:text-black md:hover:text-purple"
+                    className="relative mx-auto text-gray-200 font-semibold text-xl transition-colors duration-300 after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 after:transition-[width] after:duration-300 hover:text-white hover:after:w-5 md:after:bg-black md:text-black md:hover:text-purple flex flex-row gap-2 items-center"
                     to={link.path}
                     key={i}
                     onClick={() => setNavOpened(false)}
                 >
                     {link.title}
+                    {link.icon}
                 </Link>
             ))}
         </nav>
