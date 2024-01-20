@@ -54,7 +54,7 @@ function App() {
                 </div>
                 <div className="max-w-5xl md:mx-auto gap-5 grid md:grid-cols-2 place-items-center m-4 mx-auto p-3">
                     <h1 className="text-4xl font-bold max-w-max mx-auto self-end">
-                        Want is Axo Proyect Nexus?
+                        What is Axo Proyect Nexus?
                     </h1>
 
                     <div className="md:row-span-2 w-56 md:w-96">
