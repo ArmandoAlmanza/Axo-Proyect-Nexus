@@ -5,7 +5,7 @@ interface Props {
 }
 const TaskCard = ({ title, description, status }: Props) => {
     return (
-        <article className="p-4 border border-gray-300 rounded-xl w-full grid gap-3">
+            <article className="p-4 border border-gray-300 rounded-xl w-full grid gap-3 shadow-violet-300 shadow-md">
             <div className="flex flex-row justify-between">
                 <h1 className="font-bold text-2xl">{title}</h1>
                 <span className={`rounded-full ${status} w-5 h-5`}></span>
