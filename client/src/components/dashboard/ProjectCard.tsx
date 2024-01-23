@@ -19,10 +19,11 @@ const ProjectCard = () => {
                             <h2 className="text-center text-xl font-bold border-b border-b-gray-300">
                                 Team Members
                             </h2>
-
-                            {teams.Members.map((member, i) => (
-                                <MemberCard key={i} {...member} />
-                            ))}
+                            <div className="overflow-y-scroll min-h-[420px] max-h-[420px]">
+                                {teams.Members.map((member, i) => (
+                                    <MemberCard key={i} {...member} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,7 +32,7 @@ const ProjectCard = () => {
                     <h2 className="text-center text-xl font-bold border-b border-b-gray-300">
                         Comments
                     </h2>
-                    <div className="overflow-y-scroll">
+                    <div className="overflow-y-scroll min-h-[500px] max-h-[500px]">
                         <Comments />
                     </div>
                 </div>
