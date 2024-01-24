@@ -1,12 +1,5 @@
-interface Props {
-    title: string;
-    status: string;
-    description: string;
-    assigned: string;
-    assigned_to: string;
-    end_date: string;
-    start_date: string;
-}
+import { Task } from "../../interfaces/tasks";
+
 const TaskCard = ({
     title,
     description,
@@ -15,7 +8,7 @@ const TaskCard = ({
     assigned_to,
     end_date,
     start_date,
-}: Props) => {
+}: Task) => {
     return (
         <article className="p-4 border border-gray-300 rounded-xl w-full grid gap-3 shadow-violet-300 shadow-md min-h-[300px]">
             <div className="flex flex-row justify-between">
