@@ -7,7 +7,7 @@ interface Props {
 
 const MemberCard = ({ name, email, img, rol }: Props) => {
     return (
-        <div className="flex justify-evenly border-b border-b-gray-300 items-center">
+        <div className="grid grid-cols-3 border-b border-b-gray-300 items-center">
             <img
                 className="h-20 justify-items-start"
                 src={img != "" ? img : "/axolotl.png"}
@@ -17,7 +17,15 @@ const MemberCard = ({ name, email, img, rol }: Props) => {
                 {name}
                 <span className="text-violet-400 text-sm">({email})</span>
             </p>
-            <p>{rol}</p>
+            <p
+                className={`${
+                    rol === "leader"
+                        ? "text-violet-600"
+                        : "text-black"
+                } font-bold self-start`}
+            >
+                {rol}
+            </p>
         </div>
     );
 };
