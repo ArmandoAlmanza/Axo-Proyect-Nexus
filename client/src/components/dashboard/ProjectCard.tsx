@@ -11,7 +11,7 @@ const ProjectCard = () => {
         <article className="border rounded-xl mx-auto grid xl:grid-cols-[1fr,400px] p-4 w-full min-h-screen">
             <div className="flex flex-col gap-3 order-1 w-full">
                 <div>
-                    <h1 className="text-3xl font-semibold text-center mb-3">
+                    <h1 className="text-3xl font-semibold text-center mb-3 mt-3 md:mt-0">
                         {project.title}
                     </h1>
                     <div className="grid gap-10 w-[95%] mx-auto">
@@ -38,34 +38,33 @@ const ProjectCard = () => {
                 </div>
             </div>
 
-            <div className="border border-gray-300 items-center rounded-xl">
-                <nav className="p-3 flex md:flex-row md:justify-between border-b border-b-gray-300 w-full items-end">
-                    <h1 className="text-3xl font-semibold">Tasks</h1>
-                    <div className="flex flex-row justify-between gap-4 px-3">
-                        <p
-                            className={`${
-                                active ? "text-violet-600" : "text-black"
-                            } text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600 duration-300 hover:border-violet-600`}
-                        >
-                            Priority
-                        </p>
-                        <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600">
-                            Status
-                        </p>
-                        <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600">
-                            User
-                        </p>
+            <div className="grid gap-4">
+                <div className="border border-gray-300 items-center rounded-xl">
+                    <nav className="p-3 flex md:flex-row md:justify-between border-b border-b-gray-300 w-full items-end">
+                        <h2 className="text-3xl font-semibold">Tasks</h2>
+                        <div className="flex flex-row justify-between gap-4 px-3">
+                            <p
+                                className={`${
+                                    active ? "text-violet-600" : "text-black"
+                                } text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600 duration-300 hover:border-violet-600`}
+                            >
+                                Priority
+                            </p>
+                            <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600">
+                                Status
+                            </p>
+                            <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600">
+                                User
+                            </p>
+                        </div>
+                    </nav>
+                    <div>
+                        <div className="grid md:grid-cols-2 place-items-center p-4 gap-3 w-full">
+                            {tasks.map((task, i) => (
+                                <TaskCard key={i} {...task} />
+                            ))}
+                        </div>
                     </div>
-                </nav>
-                <div className="grid md:grid-cols-2 place-items-center p-4 gap-3 w-full">
-                    {tasks.map((task, i) => (
-                        <TaskCard
-                            key={i}
-                            title={task.title}
-                            description={task.description}
-                            status={task.status}
-                        />
-                    ))}
                 </div>
             </div>
         </article>
