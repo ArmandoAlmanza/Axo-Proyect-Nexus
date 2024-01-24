@@ -4,27 +4,32 @@
         {
             "name": "Armando Almanza",
             "email": "armando.s.almanza@gmail.com",
-            "rol": "leader"
+            "rol": "leader",
+            "img": ""
         },
         {
             "name": "Ana Pomposo",
             "email": "ana@gmail.com",
-            "rol": "participant"
+            "rol": "participant",
+            "img": "/axolotl.png"
         },
         {
             "name": "Jesús Chavez",
             "email": "ana@gmail.com",
-            "rol": "participant"
+            "rol": "participant",
+            "img": ""
         },
         {
             "name": "Itzel Geraldine",
             "email": "ana@gmail.com",
-            "rol": "participant"
+            "rol": "participant",
+            "img": ""
         },
         {
             "name": "Ximena Maldonado",
             "email": "ana@gmail.com",
-            "rol": "participant"
+            "rol": "participant",
+            "img": ""
         }
     ]
 }

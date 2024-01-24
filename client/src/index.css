@@ -49,18 +49,18 @@ html {
 }
 
 .started {
-    background-color: blue;
+    background-color: #92C7CF;
 }
 
 .completed {
-    background-color: green;
+    background-color: #99BC85;
 }
 
 .canceled {
-    background-color: red;
+    background-color: #DC8686;
 }
 .in_progress {
-    background-color: yellow;
+    background-color: #EBEF95;
 }
 
 .active {

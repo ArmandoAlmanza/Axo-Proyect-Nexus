@@ -3,7 +3,7 @@ import App from "../App";
 import ErrorPage from "../pages/ErrorPage";
 import Auth from "../pages/Auth";
 import Dashboard from "../pages/Dashboard";
-import ProjectList from "../components/dashboard/ProjectList";
+import ProjectCard from "../components/dashboard/ProjectCard";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/dashboard",
-                element: <ProjectList />,
+                element: <ProjectCard />,
             },
         ],
     },
