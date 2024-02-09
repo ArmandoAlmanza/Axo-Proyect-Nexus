@@ -14,8 +14,8 @@ This project is not dockerized (for now) so if you want to run this repo you nee
 | NodeJs     | [NodeJS Last version](https://nodejs.org/en/download/current)                                                                                                                                                                                      |
 | Java       | (For Mac Java) [Java 8](https://www.java.com/es/download/apple.jsp)<br><br>(For Mac JDK v17) [JDK v17](https://www.oracle.com/mx/java/technologies/downloads/#jdk17-mac) |
 | Maven      | [Empaquetador de Java](https://maven.apache.org/download.cgi)                                                                                                                                                                                        |
-| Go         | [https://go.dev/doc/install](https://go.dev/doc/install)                                                                                                                                                                                                              |
-| PostgreSQL | [https://www.postgresql.org/download/](https://www.postgresql.org/download/)                                                                                                                                                                                          |
+| Go         | [GoLang](https://go.dev/doc/install)                                                                                                                                                                                                              |
+| PostgreSQL | [PostgreSQL](https://www.postgresql.org/download/)                                                                                                                                                                                          |
 
 You need to download everything to run this app (until i dockerized).
 
