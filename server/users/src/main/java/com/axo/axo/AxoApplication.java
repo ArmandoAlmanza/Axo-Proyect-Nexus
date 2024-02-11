@@ -1,13 +1,13 @@
-package com.axoserver.axousers;
+package com.axo.axo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AxousersApplication {
+public class AxoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AxousersApplication.class, args);
+		SpringApplication.run(AxoApplication.class, args);
 	}
 
 }

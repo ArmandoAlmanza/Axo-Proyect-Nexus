@@ -1,4 +1,4 @@
-package com.axoserver.demo;
+package com.axo.Auth;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,14 +7,18 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
-@RequestMapping("api/v1/demo")
+@RequestMapping("/auth")
 @RequiredArgsConstructor
-public class DemoController {
+public class AuthController {
 
-	@PostMapping("demo")
-	public String welcome() {
+	@PostMapping("login")
+	public String login() {
+		return "you are logged";
+	}
 
-		return "Welcome to my api";
+	@PostMapping("register")
+	public String register() {
+		return "you are registered";
 	}
 
 }

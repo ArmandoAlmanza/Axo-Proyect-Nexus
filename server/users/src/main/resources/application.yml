@@ -5,7 +5,7 @@ server:
 
 spring:
     datasource:
-        url: jdbc:postgresql://localhost:5432/axos
+        url: jdbc:postgresql://localhost:5432/axo
         username: postgres
         password: root
         driver-class-name: org.postgresql.Driver

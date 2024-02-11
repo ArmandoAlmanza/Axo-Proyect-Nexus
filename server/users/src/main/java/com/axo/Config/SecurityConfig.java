@@ -1,6 +1,5 @@
-package com.axoserver.config;
+package com.axo.Config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -14,14 +13,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-	// Endpoints
-	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		return http
 				.csrf(csrf -> csrf.disable())
-				.authorizeHttpRequests(
-						authRequest -> authRequest.requestMatchers("/auth/**").permitAll()
-								.anyRequest().authenticated())
+				.authorizeHttpRequests(authRequests -> authRequests.requestMatchers("/auth/**").permitAll().anyRequest()
+						.authenticated())
 				.formLogin(withDefaults())
 				.build();
 	}
