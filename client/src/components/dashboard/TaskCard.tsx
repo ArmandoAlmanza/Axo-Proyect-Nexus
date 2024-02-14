@@ -15,7 +15,7 @@ const TaskCard = ({
                 <h1 className="font-bold text-2xl">{title}</h1>
                 <span className={`rounded-full ${status} w-5 h-5`}></span>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row md:justify-between">
                 <div>
                     <p className="font-bold">
                         Assigned by{" "}

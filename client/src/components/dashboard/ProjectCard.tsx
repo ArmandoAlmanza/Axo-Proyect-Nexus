@@ -32,7 +32,7 @@ const ProjectCard = () => {
                     <h2 className="text-center text-xl font-bold border-b border-b-gray-300">
                         Comments
                     </h2>
-                    <div className="overflow-y-scroll min-h-[500px] max-h-[500px]">
+                    <div className="overflow-y-scroll min-h-[350px] max-h-[350px]">
                         <Comments />
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const ProjectCard = () => {
                         </div>
                     </nav>
                     <div>
-                        <div className="grid md:grid-cols-2 place-items-center p-4 gap-3 w-full">
+                        <div className="grid md:grid-cols-2 place-items-center p-4 gap-3 w-full lg:overflow-y-scroll lg:max-h-[800px]">
                             {tasks.map((task, i) => (
                                 <TaskCard key={i} {...task} />
                             ))}
