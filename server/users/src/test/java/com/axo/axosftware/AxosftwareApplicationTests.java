@@ -1,10 +1,10 @@
-package com.axo.axo;
+package com.axo.axosftware;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AxoApplicationTests {
+class AxosftwareApplicationTests {
 
 	@Test
 	void contextLoads() {
