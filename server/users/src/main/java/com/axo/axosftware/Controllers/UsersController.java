@@ -15,24 +15,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.axo.axosftware.Models.Users;
-import com.axo.axosftware.Services.UsersService;
+import com.axo.axosftware.Models.User;
+import com.axo.axosftware.Services.User.UserService;
 
 @RestController
 @RequestMapping("/api/users")
 public class UsersController {
 
 	@Autowired
-	private UsersService service;
+	private UserService service;
 
 	@GetMapping("")
-	public List<Users> list() {
+	public List<User> list() {
 		return service.findAll();
 	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<?> view(@PathVariable String id) {
-		Optional<Users> userOptional = service.findById(id);
+		Optional<User> userOptional = service.findById(id);
 		if (userOptional.isPresent()) {
 			return ResponseEntity.ok(userOptional.orElseThrow());
 		}
@@ -40,21 +40,19 @@ public class UsersController {
 	}
 
 	@PostMapping("")
-	public ResponseEntity<Users> create(@RequestBody Users user) {
-		Users newUser = service.save(user);
+	public ResponseEntity<User> create(@RequestBody User user) {
+		User newUser = service.save(user);
 		return ResponseEntity.status(HttpStatus.CREATED).body(newUser);
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Users> update(@PathVariable String id, @RequestBody Users user) {
+	public ResponseEntity<User> update(@PathVariable String id, @RequestBody User user) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(service.save(user));
 	}
 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable String id) {
-		Users user = new Users();
-		user.setId(id);
-		Optional<Users> userOptional = service.delete(user);
+		Optional<User> userOptional = service.delete(id);
 		if (userOptional.isPresent()) {
 			return ResponseEntity.ok(userOptional.orElseThrow());
 		}

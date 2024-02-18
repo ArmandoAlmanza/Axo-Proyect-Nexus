@@ -2,8 +2,8 @@ package com.axo.axosftware.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.axo.axosftware.Models.Users;
+import com.axo.axosftware.Models.User;
 
-public interface UserRepository extends CrudRepository<Users, String> {
+public interface UserRepository extends CrudRepository<User, String> {
 
 }
