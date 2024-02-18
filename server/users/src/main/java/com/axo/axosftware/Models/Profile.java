@@ -23,8 +23,8 @@ public class Profile {
 
 	@Id
 	private String id;
-	private LocalDate birthDate;
-	private MultipartFile img;
+	private LocalDate birthdate;
+	private String img;
 
 	@OneToOne
 	private User user_id;
