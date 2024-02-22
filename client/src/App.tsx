@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaUsers, FaRegPaperPlane, FaBriefcase } from "react-icons/fa6";
 import useScreenScroll from "./hooks/useScreenScroll";
 import Footer from "./components/Footer";
+import Button from "./components/generals/Button";
 
 function App() {
     const logged = false;
@@ -35,12 +36,11 @@ function App() {
                 </h1>
 
                 <nav>
-                    <Link
-                        to={logged ? "/dashboard" : "/auth"}
-                        className="flex justify-center items-center gap-x-2 bg-black text-white py-2 px-[.5rem] transition-colors duration-500 hover:bg-purple text-lg mx-auto w-max"
-                    >
-                        <FaRegPaperPlane />
-                        Try it Now
+                    <Link to={logged ? "/dashboard" : "/auth"}>
+                        <Button>
+                            <FaRegPaperPlane />
+                            Try it Now
+                        </Button>
                     </Link>
                 </nav>
             </header>
@@ -67,12 +67,12 @@ function App() {
                             teams, tasks, etc... and what makes us spetial? well
                             we had an axolotl as pet c:
                         </p>
-                        <Link
-                            to={logged ? "/exams" : "/auth"}
-                            className="flex justify-center items-center gap-x-2 bg-black text-white py-3 px-[1.1rem] transition-colors duration-500 hover:bg-purple text-xl mx-auto max-w-80"
-                        >
-                            <FaBriefcase />
-                            Start a proyect
+
+                        <Link to={logged ? "/exams" : "/auth"}>
+                            <Button className="px-5">
+                                <FaBriefcase />
+                                Start a proyect
+                            </Button>
                         </Link>
                     </div>
                 </div>
