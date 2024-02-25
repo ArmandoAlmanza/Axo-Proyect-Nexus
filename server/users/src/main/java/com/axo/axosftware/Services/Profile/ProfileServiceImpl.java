@@ -46,7 +46,7 @@ public class ProfileServiceImpl implements ProfileService {
 	}
 
 	@Override
-	public List<UserProfileProjection> findUserProfiles() {
-		return profileRepository.findUserProfiles();
+	public Optional<UserProfileProjection> findUserProfiles(String id) {
+		return profileRepository.findUserProfiles(id);
 	}
 }

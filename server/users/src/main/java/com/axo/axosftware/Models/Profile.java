@@ -6,6 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -23,9 +24,11 @@ public class Profile {
 
 	@Id
 	private String id;
+
 	private LocalDate birthdate;
 	private String img;
 
 	@OneToOne
+	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user_id;
 }
