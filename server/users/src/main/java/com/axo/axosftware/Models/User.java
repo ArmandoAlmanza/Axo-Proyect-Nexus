@@ -1,6 +1,5 @@
 package com.axo.axosftware.Models;
 
-import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -22,5 +21,4 @@ public class User {
 	private String email;
 	private String name;
 	private String password;
-	private LocalDate expiration;
 }
