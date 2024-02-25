@@ -20,19 +20,19 @@ import com.axo.axosftware.Services.User.UserService;
 
 @RestController
 @RequestMapping("/api/users")
-public class UsersController {
+public class UserController {
 
 	@Autowired
-	private UserService service;
+	private UserService userService;
 
 	@GetMapping("")
 	public List<User> list() {
-		return service.findAll();
+		return userService.findAll();
 	}
 
 	@GetMapping("/{id}")
 	public ResponseEntity<?> view(@PathVariable String id) {
-		Optional<User> userOptional = service.findById(id);
+		Optional<User> userOptional = userService.findById(id);
 		if (userOptional.isPresent()) {
 			return ResponseEntity.ok(userOptional.orElseThrow());
 		}
@@ -41,18 +41,18 @@ public class UsersController {
 
 	@PostMapping("")
 	public ResponseEntity<User> create(@RequestBody User user) {
-		User newUser = service.save(user);
+		User newUser = userService.save(user);
 		return ResponseEntity.status(HttpStatus.CREATED).body(newUser);
 	}
 
 	@PutMapping("/{id}")
 	public ResponseEntity<User> update(@PathVariable String id, @RequestBody User user) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(service.save(user));
+		return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
 	}
 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable String id) {
-		Optional<User> userOptional = service.delete(id);
+		Optional<User> userOptional = userService.delete(id);
 		if (userOptional.isPresent()) {
 			return ResponseEntity.ok(userOptional.orElseThrow());
 		}
