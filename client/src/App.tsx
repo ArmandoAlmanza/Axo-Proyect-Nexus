@@ -3,6 +3,7 @@ import { FaUsers, FaRegPaperPlane, FaBriefcase } from "react-icons/fa6";
 import useScreenScroll from "./hooks/useScreenScroll";
 import Footer from "./components/Footer";
 import Button from "./components/generals/Button";
+import clsx from "clsx";
 
 function App() {
     const logged = false;
@@ -24,14 +25,16 @@ function App() {
     return (
         <>
             <header
-                className={`${
-                    screenScroll >= 50
-                        ? "bg-[#f0f0f0] shadow-[0_1px_16px_rgba(0, 0, 0, 0.12)] z-10"
-                        : "bg-body"
-                } sticky top-0 flex flex-row justify-evenly gap-3 p-4 border-b border-b-black content-center items-center transition-[colors,shadow] duration-300`}
+                className={clsx(
+                    "sticky top-0 flex flex-row justify-evenly gap-3 p-4 border-b border-b-black content-center items-center transition-[colors,shadow] duration-300 bg-noir-300",
+                    {
+                        "shadow-[0_1px_16px_rgba(0, 0, 0, 0.12)] z-10":
+                            screenScroll >= 50,
+                    }
+                )}
             >
                 <h1 className="text-3xl font-bold">
-                    <span className="text-violet-400">Axo</span> Project{" "}
+                    <span className="text-violet-400">Axo</span>{" "}
                     <span className="text-pink-600">Nexus</span>
                 </h1>
 
@@ -77,7 +80,7 @@ function App() {
                     </div>
                 </div>
 
-                <section className="p-3 bg-[#D4D4D4]">
+                <section className="p-3 bg-noir-400">
                     <div className="max-w-6xl mb-5 p-3 grid gap-5 mx-auto">
                         <h2 className="relative text-4xl font-bold max-w-max mx-auto mt-3 after:content-[''] after:bg-purple after:absolute after:block after:w-10 after:h-7 after:-top-1 after:-right-2 md:self-end">
                             Services.
@@ -90,7 +93,7 @@ function App() {
                                 >
                                     <div className="absolute w-full h-full border-4 border-purple top-0 left-0 transition-transform duration-500 group-hover/card:translate-x-3 group-hover/card:translate-y-3"></div>
 
-                                    <div className="h-full bg-body border-4 border-black pt-24 px-4 pb-12 z-[4] relative transition-[colors, border] duration-500">
+                                    <div className="h-full bg-noir-300 border-4 border-bluebell-300 pt-24 px-4 pb-12 z-[4] relative transition-[colors, border] duration-500">
                                         <div className="relative inline-block">
                                             <div className="absolute w-6 h-6 bg-purple-light -right-[2px] -top-[2px]"></div>
                                             <p className="text-3xl text-black relative z-[5]">
