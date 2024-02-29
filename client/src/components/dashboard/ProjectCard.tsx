@@ -8,7 +8,7 @@ const ProjectCard = () => {
     const project = projects[0];
     const active = true;
     return (
-        <article className="border rounded-xl mx-auto grid xl:grid-cols-[1fr,400px] p-4 w-full min-h-screen">
+        <article className="border rounded-xl mx-auto grid xl:grid-cols-[1fr,400px] w-full min-h-screen md:p4">
             <div className="flex flex-col gap-3 order-1 w-full">
                 <div>
                     <h1 className="text-3xl font-semibold text-center mb-3 mt-3 md:mt-0">
@@ -46,14 +46,14 @@ const ProjectCard = () => {
                             <p
                                 className={`${
                                     active ? "text-violet-600" : "text-black"
-                                } text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600 duration-300 hover:border-violet-600`}
+                                } text-lg transition-colors hover:text-violet-600 cursor-pointer px-2 rounded-full border border-gray-600 duration-300 hover:border-violet-600`}
                             >
                                 Priority
                             </p>
-                            <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600">
+                            <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer px-2 rounded-full border border-gray-600">
                                 Status
                             </p>
-                            <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer bg-white px-2 rounded-full border border-gray-600">
+                            <p className="text-lg transition-colors hover:text-violet-600 cursor-pointer px-2 rounded-full border border-gray-600">
                                 User
                             </p>
                         </div>

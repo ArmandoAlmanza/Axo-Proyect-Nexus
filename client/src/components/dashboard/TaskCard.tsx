@@ -1,4 +1,5 @@
 import { Task } from "../../interfaces/tasks";
+import Button from "../generals/Button";
 
 const TaskCard = ({
     title,
@@ -41,12 +42,12 @@ const TaskCard = ({
             </div>
             <p>{description}</p>
             <div className="flex gap-4 md:flex-row justify-between items-end">
-                <button className="flex justify-center items-center gap-x-2 bg-[#99BC85] text-white py-2 px-[.5rem] transition-colors duration-500 hover:bg-[#BFD8AF] text-md rounded-xl">
-                    Complete
-                </button>
-                <button className="flex justify-center items-center gap-x-2 bg-[#DC8686] text-white py-2 px-[.5rem] transition-colors duration-500 hover:bg-[#FF8080] text-md rounded-xl">
-                    Canceled
-                </button>
+                <Button className="bg-leaf-200 hover:bg-leaf-100 rounded-xl">
+                    <span className="text-black">Complete</span>
+                </Button>
+                <Button className="bg-garnet-200 hover:bg-garnet-100 rounded-xl">
+                    <span className="text-black">Canceled</span>
+                </Button>
             </div>
         </article>
     );
