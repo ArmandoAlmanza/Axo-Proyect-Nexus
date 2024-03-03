@@ -34,8 +34,8 @@ function App() {
                 )}
             >
                 <h1 className="text-3xl font-bold">
-                    <span className="text-violet-400">Axo</span>{" "}
-                    <span className="text-pink-600">Nexus</span>
+                    <span className="text-violet-400">Axos</span>
+                    <span className="text-pink-600">ftware</span>
                 </h1>
 
                 <nav>
