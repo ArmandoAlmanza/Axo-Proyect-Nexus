@@ -2,6 +2,7 @@ package com.axo.axosftware.Models;
 
 import java.time.LocalDate;
 
+import org.springframework.data.annotation.Transient;
 import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.persistence.Entity;
@@ -25,6 +26,9 @@ public class Profile {
 	private String id;
 	private LocalDate birthdate;
 	private String img;
+
+	@Transient
+	private MultipartFile image;
 
 	@OneToOne
 	private User user_id;
