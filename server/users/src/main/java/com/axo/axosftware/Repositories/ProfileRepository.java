@@ -1,6 +1,6 @@
 package com.axo.axosftware.Repositories;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -10,7 +10,7 @@ import com.axo.axosftware.Models.Profile;
 
 public interface ProfileRepository extends CrudRepository<Profile, String> {
 
-	@Query("select u.name as name, u.email as email, p.birthdate as birthdate, p.img as img from Profile p join p.user_id u")
-	List<UserProfileProjection> findUserProfiles();
+	@Query(value = "SELECT * FROM get_user_info(?1)", nativeQuery = true)
+	Optional<UserProfileProjection> findUserProfiles(String id);
 
 }

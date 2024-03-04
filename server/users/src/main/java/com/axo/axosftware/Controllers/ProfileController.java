@@ -1,9 +1,15 @@
 package com.axo.axosftware.Controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,13 +24,19 @@ public class ProfileController {
 	@Autowired
 	private ProfileService profileService;
 
-	@GetMapping("user")
-	public List<UserProfileProjection> profiles() {
-		return profileService.findUserProfiles();
+	@GetMapping("user/{id}")
+	public Optional<UserProfileProjection> profiles(@PathVariable String id) {
+		return profileService.findUserProfiles(id);
 	}
 
 	@GetMapping("")
 	public List<Profile> list() {
 		return profileService.findAll();
+	}
+
+	@PostMapping("")
+	public ResponseEntity<Profile> create(@RequestBody Profile profile) {
+		Profile newProfile = profileService.save(profile);
+		return ResponseEntity.status(HttpStatus.CREATED).body(newProfile);
 	}
 }

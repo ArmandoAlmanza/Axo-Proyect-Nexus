@@ -3,3 +3,5 @@
 *.env
 
 ideas.txt
+
+server/users/db
