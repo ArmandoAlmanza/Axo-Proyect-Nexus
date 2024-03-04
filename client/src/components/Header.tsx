@@ -42,13 +42,10 @@ const Header = () => {
             </div>
 
             <nav
-                className={clsx(
-                    "gap-2 justify-between items-center",
-                    {
-                        "flex flex-row":screenSize.width >= 830,
-                        "hidden":screenSize.width <= 820
-                    }
-                )}
+                className={clsx("gap-2 justify-between items-center", {
+                    "flex flex-row": screenSize.width >= 830,
+                    hidden: screenSize.width <= 820,
+                })}
             >
                 {links.map((link, i) => (
                     <a
@@ -82,14 +79,9 @@ const Header = () => {
                     <FaRegCircleXmark className="text-white text-[20px] rotate-45" />
                 </Button>
             </nav>
-            {/*    {screenSize.width >= 678 ? (
-            ) : (
-                ""
-            )}
- */}
             <div className="flex items-center content-center gap-4 justify-between">
                 <FaRegBell className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
-                {screenSize.width >= 468 ? (
+                {screenSize.width >= 830 ? (
                     <MdOutlineSettings className="text-[20px] hover:cursor-pointer md:text-[30px] hover:text-lily-400 transition-colors duration-300" />
                 ) : (
                     ""
