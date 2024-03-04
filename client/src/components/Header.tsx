@@ -11,8 +11,10 @@ import useScreenSize from "../hooks/useScreenSize";
 import Button from "./generals/Button";
 import clsx from "clsx";
 import { useState } from "react";
+import useScreenScroll from "../hooks/useScreenScroll";
 const Header = () => {
     const screenSize = useScreenSize();
+    const screenScroll = useScreenScroll();
     const [active, setActive] = useState(false);
     const links = [
         { title: "Projects", path: "/projects" },
@@ -20,7 +22,12 @@ const Header = () => {
         { title: "Tasks", path: "/tasks/{user}" },
     ];
     return (
-        <header className="border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary">
+        <header className={clsx(
+            "border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary",
+            {
+                "sticky shadow-lg top-0 z-10 bg-noir-200": screenScroll > 10
+            }
+        )}>
             <div className="flex items-center gap-4">
                 <FaBars className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
                 <div className="flex items-center content-center gap-1">
