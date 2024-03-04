@@ -17,4 +17,4 @@ spring:
     servlet:
         multipart:
             enabled: true
-            location: uploads/
+            location: uploads/images/

@@ -3,7 +3,13 @@ import App from "../App";
 import ErrorPage from "../pages/ErrorPage";
 import Auth from "../pages/Auth";
 import Dashboard from "../pages/Dashboard";
-import ProjectCard from "../components/dashboard/ProjectCard";
+import ProjectView from "../components/Dashboard/ProjectView";
+
+/* 
+    * Here we create the router for our app.
+    * We're going to use 3 principals, the landing page, the auth and finally the dashboard
+    - The Dashboard have childrens so we can visit them using /dashboard/tasks/{id}
+*/
 
 const router = createBrowserRouter([
     {
@@ -23,7 +29,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/dashboard",
-                element: <ProjectCard />,
+                element: <ProjectView />,
             },
         ],
     },
