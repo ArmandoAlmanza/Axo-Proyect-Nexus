@@ -3,11 +3,11 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            container: {
+                center: true,
+                padding: "2rem",
+            },
             colors: {
-                nav_bg: "rgba(0, 0, 0, 0.75)",
-                body: "#F9F5F6",
-                purple: "rgba(202, 3, 252, 0.38)",
-                "purple-light": "#B2A4FF",
                 lily: {
                     100: "rgb(225, 196, 255)",
                     200: "rgb(214, 177, 251)",
@@ -41,8 +41,11 @@ export default {
                 },
             },
             fontFamily: {
-                primary: ["Montserrat", "sans-serif"],
-                second: ["Mukta", "sans-serif"],
+                primary: ["Poppins", "sans-serif"],
+                secondary: ["Montserrat", "sans-serif"],
+            },
+            aspectRatio: {
+                "4/3": "4 / 3",
             },
             keyframes: {
                 "open-menu": {
@@ -51,6 +54,7 @@ export default {
                     "100%": { transform: "scaleY(1)" },
                 },
             },
+
             animation: {
                 "open-menu": "open-menu 0.5s ease-in-out forwards",
             },

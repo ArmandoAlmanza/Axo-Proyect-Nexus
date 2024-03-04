@@ -1,44 +1,91 @@
-import { FaBarsStaggered } from "react-icons/fa6";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import {
+    FaBars,
+    FaRegBell,
+    FaRegCircleXmark,
+    FaAngleDown,
+} from "react-icons/fa6";
+import { MdOutlineSettings } from "react-icons/md";
+import avatar from "/avatar.png";
+import axolotl from "/axolotl.png";
 import useScreenSize from "../hooks/useScreenSize";
+import Button from "./generals/Button";
+import clsx from "clsx";
 import { useState } from "react";
-import ProjectNav from "./projects/ProjectNav";
-import projects from "../mock/proyect.mock.json";
 const Header = () => {
     const screenSize = useScreenSize();
-    const [menuOpened, setMenuOpened] = useState(false);
+    const [active, setActive] = useState(false);
+    const links = [
+        { title: "Projects", path: "/projects" },
+        { title: "Teams", path: "/teams/{user}" },
+        { title: "Tasks", path: "/tasks/{user}" },
+    ];
     return (
-        <header
-            className={`bg-noir-purple shadow-md z-10 sticky top-0 flex flex-row justify-between p-4  content-center items-center md:flex-col md:items-start  md:w-60`}
-        >
-            <h1 className="text-3xl font-bold">
-                <span className="text-violet-400">Axo</span> Project{" "}
-                <span className="text-pink-600">Nexus</span>
-            </h1>
-            <button
-                onClick={() => {
-                    setMenuOpened(!menuOpened);
-                }}
-                className="p-2 text-white bg-black outline-none text-xl block md:hidden"
-            >
-                <FaBarsStaggered />
-            </button>
-            <Navbar navOpened={menuOpened} setNavOpened={setMenuOpened} />
-            {screenSize.width >= 768 ? (
-                <div className="grid gap-4">
-                    {projects.map((project, i) => (
-                        <ProjectNav
-                            key={i}
-                            title={project.title}
-                            img={project.icon}
-                        />
-                    ))}
+        <header className="border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary">
+            <div className="flex items-center gap-4">
+                <FaBars className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
+                <div className="flex items-center content-center gap-1">
+                    <img src={axolotl} alt="logo" className="3/4 size-9" />
+                    <h1 className="text-[30px] font-bold text-violet-400">
+                        A.Nexus
+                    </h1>
                 </div>
+            </div>
+
+            {screenSize.width >= 678 ? (
+                <nav className="flex flex-row gap-2 justify-between items-center">
+                    {links.map((link, i) => (
+                        <a
+                            href=""
+                            className={clsx(
+                                "text-[20px] hover:text-lily-400 transition-colors ease-in-out duration-300 mr-5 group/link",
+                                {
+                                    "flex items-center gap-1 content-center":
+                                        link.title === "Projects",
+                                }
+                            )}
+                            key={i}
+                            onMouseEnter={() => setActive(!active)}
+                            onMouseLeave={() => setActive(!active)}
+                        >
+                            <span>{link.title}</span>
+                            {link.title === "Projects" ? (
+                                <FaAngleDown
+                                    className={clsx(
+                                        "mt-1 transition-transform",
+                                        {
+                                            "group-hover/link:rotate-180":
+                                                active == true,
+                                        }
+                                    )}
+                                />
+                            ) : (
+                                ""
+                            )}
+                        </a>
+                    ))}
+                    <Button className="bg-lily-400 hover:bg-lily-200 px-4 flex items-center">
+                        <span>Create</span>
+                        <FaRegCircleXmark className="text-white text-[20px] rotate-45" />
+                    </Button>
+                </nav>
             ) : (
                 ""
             )}
-            {screenSize.width >= 768 ? <Footer /> : ""}
+
+            <div className="flex items-center content-center gap-4 justify-between">
+                <FaRegBell className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
+                {screenSize.width >= 468 ? (
+                    <MdOutlineSettings className="text-[20px] hover:cursor-pointer md:text-[30px] hover:text-lily-400 transition-colors duration-300" />
+                ) : (
+                    ""
+                )}
+                <img
+                    src={avatar}
+                    alt="avatar"
+                    className="3/4 size-9 outline outline-2 outline-inset-2 rounded-3xl hover:cursor-pointer md:size-10"
+                    onClick={() => console.log("click we")}
+                />
+            </div>
         </header>
     );
 };
