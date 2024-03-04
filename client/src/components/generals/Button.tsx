@@ -3,6 +3,12 @@ import { twMerge } from "tailwind-merge";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
+/*
+ * We're going to use a lot of buttons so i decided to make a base component and we only change the functionality any time we call it
+
+    ? With clsx and tailwind merge we can add extra classes that are not static, for example in the tasks we need a green and a red button, so whem we call our component we pass the new classes and it works perfectly
+ */
+
 const Button = ({ children, className, ...props }: Props) => {
     return (
         <button

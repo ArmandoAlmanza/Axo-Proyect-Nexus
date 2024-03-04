@@ -22,12 +22,15 @@ const Header = () => {
         { title: "Tasks", path: "/tasks/{user}" },
     ];
     return (
-        <header className={clsx(
-            "border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary",
-            {
-                "sticky shadow-lg top-0 z-10 bg-noir-200": screenScroll > 10
-            }
-        )}>
+        <header
+            className={clsx(
+                "border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary",
+                {
+                    "sticky shadow-lg top-0 z-10 bg-noir-200":
+                        screenScroll > 10,
+                }
+            )}
+        >
             <div className="flex items-center gap-4">
                 <FaBars className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
                 <div className="flex items-center content-center gap-1">
@@ -38,47 +41,52 @@ const Header = () => {
                 </div>
             </div>
 
-            {screenSize.width >= 678 ? (
-                <nav className="flex flex-row gap-2 justify-between items-center">
-                    {links.map((link, i) => (
-                        <a
-                            href=""
-                            className={clsx(
-                                "text-[20px] hover:text-lily-400 transition-colors ease-in-out duration-300 mr-5 group/link",
-                                {
-                                    "flex items-center gap-1 content-center":
-                                        link.title === "Projects",
-                                }
-                            )}
-                            key={i}
-                            onMouseEnter={() => setActive(!active)}
-                            onMouseLeave={() => setActive(!active)}
-                        >
-                            <span>{link.title}</span>
-                            {link.title === "Projects" ? (
-                                <FaAngleDown
-                                    className={clsx(
-                                        "mt-1 transition-transform",
-                                        {
-                                            "group-hover/link:rotate-180":
-                                                active == true,
-                                        }
-                                    )}
-                                />
-                            ) : (
-                                ""
-                            )}
-                        </a>
-                    ))}
-                    <Button className="bg-lily-400 hover:bg-lily-200 px-4 flex items-center">
-                        <span>Create</span>
-                        <FaRegCircleXmark className="text-white text-[20px] rotate-45" />
-                    </Button>
-                </nav>
+            <nav
+                className={clsx(
+                    "gap-2 justify-between items-center",
+                    {
+                        "flex flex-row":screenSize.width >= 830,
+                        "hidden":screenSize.width <= 820
+                    }
+                )}
+            >
+                {links.map((link, i) => (
+                    <a
+                        href=""
+                        className={clsx(
+                            "text-[20px] hover:text-lily-400 transition-colors ease-in-out duration-300 mr-5 group/link",
+                            {
+                                "flex items-center gap-1 content-center":
+                                    link.title === "Projects",
+                            }
+                        )}
+                        key={i}
+                        onMouseEnter={() => setActive(!active)}
+                        onMouseLeave={() => setActive(!active)}
+                    >
+                        <span>{link.title}</span>
+                        {link.title === "Projects" ? (
+                            <FaAngleDown
+                                className={clsx("mt-1 transition-transform", {
+                                    "group-hover/link:rotate-180":
+                                        active == true,
+                                })}
+                            />
+                        ) : (
+                            ""
+                        )}
+                    </a>
+                ))}
+                <Button className="bg-lily-400 hover:bg-lily-200 px-4 flex items-center">
+                    <span>Create</span>
+                    <FaRegCircleXmark className="text-white text-[20px] rotate-45" />
+                </Button>
+            </nav>
+            {/*    {screenSize.width >= 678 ? (
             ) : (
                 ""
             )}
-
+ */}
             <div className="flex items-center content-center gap-4 justify-between">
                 <FaRegBell className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
                 {screenSize.width >= 468 ? (

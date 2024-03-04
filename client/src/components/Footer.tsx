@@ -8,6 +8,12 @@ import {
 } from "react-icons/fa6";
 import { MdOutlineSettings } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Button from "./generals/Button";
+
+/*
+ * We make the footer our naviation for small devices, here we only have links to other stuff
+ */
+
 const Footer = () => {
     return (
         <footer className="self-end border-t border-t-white px-2 py-4 sticky bottom-0 bg-noir-200 grid grid-cols-[1fr,70px,1fr] gap-2">
@@ -34,9 +40,9 @@ const Footer = () => {
                 </Link>
             </div>
             <div className="grid place-content-center w-fit mx-auto">
-                <Link to={"/dashboard"} className="rounded-full">
+                <Button className="rounded-full">
                     <FaRegCircleXmark className="text-[30px] rotate-45 text-lily-400 transition-colors duration-300" />
-                </Link>
+                </Button>
             </div>
             <div className="flex gap-2 justify-between px-1 items-center">
                 <Link

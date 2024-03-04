@@ -5,6 +5,12 @@ import Auth from "../pages/Auth";
 import Dashboard from "../pages/Dashboard";
 import ProjectView from "../components/Dashboard/ProjectView";
 
+/* 
+    * Here we create the router for our app.
+    * We're going to use 3 principals, the landing page, the auth and finally the dashboard
+    - The Dashboard have childrens so we can visit them using /dashboard/tasks/{id}
+*/
+
 const router = createBrowserRouter([
     {
         path: "/",
