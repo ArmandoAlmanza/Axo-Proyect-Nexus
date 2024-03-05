@@ -40,7 +40,7 @@ const Footer = () => {
                 </Link>
             </div>
             <div className="grid place-content-center w-fit mx-auto">
-                <Button className="rounded-full">
+                <Button className="rounded-full bg-transparent">
                     <FaRegCircleXmark className="text-[30px] rotate-45 text-lily-400 transition-colors duration-300" />
                 </Button>
             </div>

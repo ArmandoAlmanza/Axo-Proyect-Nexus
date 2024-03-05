@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Dispatch, SetStateAction } from "react";
-import { FaHome, FaTimes, FaUserTimes } from "react-icons/fa";
+import { FaHome, FaUserTimes } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa6";
 
 interface NavProps {
@@ -11,28 +11,20 @@ interface NavProps {
 const Navbar = ({ navOpened, setNavOpened }: NavProps) => {
     const links = [
         { title: "Home", path: "/dashboard", icon: <FaHome /> },
-        { title: "Profile", path: "/dashboard", icon: <FaBriefcase />  },
-        { title: "Log Out", path: "/auth", icon: <FaUserTimes />  },
+        { title: "Profile", path: "/dashboard", icon: <FaBriefcase /> },
+        { title: "Log Out", path: "/auth", icon: <FaUserTimes /> },
     ];
-    const displayState = navOpened ? "top-0" : "-top-full";
+    const displayState = navOpened ? "left-0" : "-left-full";
     return (
         <nav
-            className={`flex flex-col gap-5 items-start -top-full left-0 text-white z-50 w-full fixed h-full bg-nav_bg text-center backdrop:blur-lg transition-[top] duration-500 px-7 py-10 sm:hidden ${displayState} md:top-0 md:bg-transparent md:relative md:flex md:flex-col md:gap-5 md:justify-between font-second md:visible md:h-auto`}
+            className={`flex bg-noir-200 flex-col gap-5 items-start left-0 top-14 text-white z-50 w-full fixed h-full bg-nav_bg text-center backdrop:blur-lg transition-[left] duration-500 px-7 py-10 ${displayState}`}
         >
-            <button
-                onClick={() => {
-                    setNavOpened(false);
-                }}
-                className="rounded-full py-1 text-white bg-black px-1 outline-none absolute cursor-pointer top-4 right-6 text-xl self-end transform md:hidden"
-            >
-                <FaTimes />
-            </button>
-            <span className="mx-auto mb-4 relative text-3xl font-semibold after:content-[''] after:w-20 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 text-white md:hidden">
+            <span className="mx-auto mb-4 relative text-3xl font-semibold after:content-[''] after:w-20 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 text-white ">
                 Menu
             </span>
             {links.map((link, i) => (
                 <Link
-                    className="relative mx-auto text-gray-200 font-semibold text-xl transition-colors duration-300 after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 after:transition-[width] after:duration-300 hover:text-white hover:after:w-5  md:hover:text-purple flex flex-row gap-2 items-center"
+                    className="relative mx-auto text-gray-200 font-semibold text-xl transition-colors duration-300 after:content-[''] after:w-0 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 after:transition-[width] after:duration-300 hover:text-white hover:after:w-5  md:hover:text-lily-400 flex flex-row gap-2 items-center"
                     to={link.path}
                     key={i}
                     onClick={() => setNavOpened(false)}

@@ -12,10 +12,12 @@ import Button from "./generals/Button";
 import clsx from "clsx";
 import { useState } from "react";
 import useScreenScroll from "../hooks/useScreenScroll";
+import Navbar from "./Navbar";
 const Header = () => {
     const screenSize = useScreenSize();
     const screenScroll = useScreenScroll();
     const [active, setActive] = useState(false);
+    const [menuOpened, setMenuOpened] = useState(false);
     const links = [
         { title: "Projects", path: "/projects" },
         { title: "Teams", path: "/teams/{user}" },
@@ -32,13 +34,19 @@ const Header = () => {
             )}
         >
             <div className="flex items-center gap-4">
-                <FaBars className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
+                <FaBars
+                    className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300"
+                    onClick={() => {
+                        setMenuOpened(!menuOpened);
+                    }}
+                />
                 <div className="flex items-center content-center gap-1">
                     <img src={axolotl} alt="logo" className="3/4 size-9" />
                     <h1 className="text-[30px] font-bold text-violet-400">
                         A.Nexus
                     </h1>
                 </div>
+            <Navbar navOpened={menuOpened} setNavOpened={setMenuOpened} />
             </div>
 
             <nav
