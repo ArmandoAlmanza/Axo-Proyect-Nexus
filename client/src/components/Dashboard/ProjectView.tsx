@@ -12,10 +12,10 @@ import DashboardNav from "./DashboardNav";
 const ProjectView = () => {
     const screenSize = useScreenSize();
     return (
-        <div>
+        <main className="grid md:grid-cols-[350px,1fr]">
             {screenSize.width > 800 ? <DashboardNav /> : ""}
             <h1>Aqui va el proyecto</h1>
-        </div>
+        </main>
     );
 };
 
