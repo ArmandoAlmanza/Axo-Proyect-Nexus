@@ -17,9 +17,9 @@ const Navbar = ({ navOpened, setNavOpened }: NavProps) => {
     const displayState = navOpened ? "left-0" : "-left-full";
     return (
         <nav
-            className={`flex bg-noir-200 flex-col gap-5 items-start left-0 top-14 text-white z-50 w-full fixed h-full bg-nav_bg text-center backdrop:blur-lg transition-[left] duration-500 px-7 py-10 ${displayState}`}
+            className={`flex bg-noir-200 flex-col gap-5 items-start top-14 text-white z-50 w-full fixed h-full bg-nav_bg text-center backdrop:blur-lg transition-[left] duration-500 px-7 py-10 ${displayState}`}
         >
-            <span className="mx-auto mb-4 relative text-3xl font-semibold after:content-[''] after:w-20 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 text-white ">
+            <span className="mx-auto mb-4 relative text-3xl font-semibold after:content-[''] after:w-20 after:h-[2px] after:bg-white after:absolute after:left-0 after:-bottom-2 text-white">
                 Menu
             </span>
             {links.map((link, i) => (
