@@ -111,7 +111,6 @@ function App() {
                     </div>
                 </section>
             </main>
-            <Footer />
         </>
     );
 }
