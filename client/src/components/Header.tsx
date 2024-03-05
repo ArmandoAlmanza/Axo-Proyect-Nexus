@@ -41,7 +41,7 @@ const Header = () => {
                     }}
                 />
                 <div className="flex items-center content-center gap-1">
-                    <img src={axolotl} alt="logo" className="3/4 size-9" />
+                    <img src={axolotl} alt="logo" className="3/4 size-9 select-none" />
                     <h1 className="text-[30px] font-bold text-violet-400">
                         A.Nexus
                     </h1>
@@ -97,7 +97,7 @@ const Header = () => {
                 <img
                     src={avatar}
                     alt="avatar"
-                    className="3/4 size-9 outline outline-2 outline-inset-2 rounded-3xl hover:cursor-pointer md:size-10"
+                    className="3/4 size-9 outline outline-2 outline-inset-2 rounded-3xl hover:cursor-pointer md:size-10 select-none"
                     onClick={() => console.log("click we")}
                 />
             </div>
