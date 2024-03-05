@@ -16,7 +16,7 @@ const Dashboard = () => {
         <main className="w-full grid">
             <Header />
             <Outlet />
-            {screenSize.width <= 390 ? <Footer /> : ""}
+            {screenSize.width <= 800 ? <Footer /> : ""}
         </main>
     );
 };
