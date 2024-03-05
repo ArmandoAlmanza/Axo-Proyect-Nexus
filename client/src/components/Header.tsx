@@ -43,8 +43,8 @@ const Header = () => {
 
             <nav
                 className={clsx("gap-2 justify-between items-center", {
-                    "flex flex-row": screenSize.width >= 830,
-                    hidden: screenSize.width <= 820,
+                    "flex flex-row": screenSize.width >= 800,
+                    hidden: screenSize.width < 800,
                 })}
             >
                 {links.map((link, i) => (
@@ -81,7 +81,7 @@ const Header = () => {
             </nav>
             <div className="flex items-center content-center gap-4 justify-between">
                 <FaRegBell className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300" />
-                {screenSize.width >= 830 ? (
+                {screenSize.width >= 800 ? (
                     <MdOutlineSettings className="text-[20px] hover:cursor-pointer md:text-[30px] hover:text-lily-400 transition-colors duration-300" />
                 ) : (
                     ""
