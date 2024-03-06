@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import useScreenSize from "../../hooks/useScreenSize";
 import DashboardNav from "./DashboardNav";
-
 /*
  * This will be the main view when you enter the app (not the loggin or landing page)
  * This component call some other, Like
@@ -11,8 +11,13 @@ import DashboardNav from "./DashboardNav";
  */
 const ProjectView = () => {
     const screenSize = useScreenSize();
+
     return (
-        <main className="grid md:grid-cols-[350px,1fr]">
+        <main
+            className={clsx("grid gap-4", {
+                "grid-cols-[300px,auto]": screenSize.width > 800,
+            })}
+        >
             {screenSize.width > 800 ? <DashboardNav /> : ""}
             <h1>Aqui va el proyecto</h1>
         </main>
