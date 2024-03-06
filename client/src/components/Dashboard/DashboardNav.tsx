@@ -1,8 +1,12 @@
+import ProjectIcon from "../projects/ProjectIcon";
+import ProjectNav from "../projects/ProjectNav";
+
 const DashboardNav = () => {
     return (
-        <div>
-            <h1>La Navegación importa</h1>
-        </div>
+        <aside className=" border-r border-r-white grid gap-3 place-items-center w-full ">
+            <ProjectIcon title="Axo Project Nexus" img="/axo_little.png" />
+            <ProjectNav/>
+        </aside>
     );
 };
 
