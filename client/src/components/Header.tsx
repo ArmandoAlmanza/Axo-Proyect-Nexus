@@ -35,18 +35,27 @@ const Header = () => {
         >
             <div className="flex items-center gap-4">
                 <FaBars
-                    className="text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300"
+                    className={clsx(
+                        "text-[25px] hover:cursor-pointer hover:text-lily-400 transition-colors duration-300",
+                        {
+                            hidden: screenSize.width >= 800,
+                        }
+                    )}
                     onClick={() => {
                         setMenuOpened(!menuOpened);
                     }}
                 />
                 <div className="flex items-center content-center gap-1">
-                    <img src={axolotl} alt="logo" className="3/4 size-9 select-none" />
+                    <img
+                        src={axolotl}
+                        alt="logo"
+                        className="aspect-4/3 size-9 select-none"
+                    />
                     <h1 className="text-[30px] font-bold text-violet-400">
                         A.Nexus
                     </h1>
                 </div>
-            <Navbar navOpened={menuOpened} setNavOpened={setMenuOpened} />
+                <Navbar navOpened={menuOpened} setNavOpened={setMenuOpened} />
             </div>
 
             <nav
