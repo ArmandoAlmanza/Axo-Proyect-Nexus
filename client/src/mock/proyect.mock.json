@@ -9,7 +9,8 @@
             "ea003045-21a0-4098-9333-0c8d68b32719"
         ],
         "favorite": true,
-        "icon": "/axolotl.png"
+        "icon": "/axo_little.png",
+        "deathline": "2024/05/31"
     },
     {
         "title": "Berry Exams",
@@ -20,8 +21,9 @@
             "ea003045-21a0-4098-9333-0c8d68b32719",
             "ea003045-21a0-4098-9333-0c8d68b32719"
         ],
-        "favorite": true,
-        "icon": ""
+        "favorite": false,
+        "icon": "",
+        "deathline": "2024/05/31"
     },
     {
         "title": "Axo Cli Manage",
@@ -32,7 +34,8 @@
             "ea003045-21a0-4098-9333-0c8d68b32719",
             "ea003045-21a0-4098-9333-0c8d68b32719"
         ],
-        "favorite": true,
-        "icon": ""
+        "favorite": false,
+        "icon": "",
+        "deathline": "2024/05/31"
     }
 ]
