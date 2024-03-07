@@ -13,7 +13,7 @@ import useScreenSize from "../hooks/useScreenSize";
 const Dashboard = () => {
     const screenSize = useScreenSize();
     return (
-        <main className="w-full grid">
+        <main className="w-full grid overflow-y-hidden h-screen no-scrollbar">
             <Header />
             <Outlet />
             {screenSize.width <= 800 ? <Footer /> : ""}

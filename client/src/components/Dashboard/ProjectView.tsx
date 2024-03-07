@@ -2,6 +2,7 @@ import clsx from "clsx";
 import useScreenSize from "../../hooks/useScreenSize";
 import DashboardNav from "./DashboardNav";
 import FilterBar from "../tasks/FilterBar";
+import TasksList from "../tasks/TasksList";
 /*
  * This will be the main view when you enter the app (not the loggin or landing page)
  * This component call some other, Like
@@ -20,7 +21,10 @@ const ProjectView = () => {
             })}
         >
             {screenSize.width > 800 ? <DashboardNav /> : ""}
-            <FilterBar />
+            <div className="overflow-y-scroll h-screen no-scrollbar">
+                <FilterBar />
+                <TasksList />
+            </div>
         </main>
     );
 };

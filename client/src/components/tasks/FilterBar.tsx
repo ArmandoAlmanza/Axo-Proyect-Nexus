@@ -16,7 +16,7 @@ const FilterBar = () => {
             )}
 
             <div className="container my-6 font-secondary w-full mx-auto">
-                <ul className="border items-center w-full font-medium text-white border-bluebell-300 rounded-lg flex justify-evenly">
+                <ul className="border items-center w-full font-medium text-white border-bluebell-300 flex flex-col md:flex-row justify-evenly rounded-3xl">
                     <li className="w-full">
                         <div className="flex items-center ps-3">
                             <input

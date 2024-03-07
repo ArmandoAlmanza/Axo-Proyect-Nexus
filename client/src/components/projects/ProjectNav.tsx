@@ -48,7 +48,7 @@ const ProjectNav = () => {
 
     return (
         <div className="font-secondary w-full">
-            <nav className="grid gap-9 py-64 place-items-start place-content-center font-secondary border-b border-white w-full">
+            <nav className="grid gap-9 py-60 place-items-start place-content-center font-secondary border-b border-white w-full">
                 {links.map((link, i) => (
                     <button
                         key={i}
@@ -83,7 +83,7 @@ export default ProjectNav;
 
 const SettingMenu = () => {
     return (
-        <nav className="grid gap-4 py-4 place-items-start place-content-center font-secondary border-b border-b-white w-full">
+        <nav className="grid gap-4 py-8 place-items-start place-content-center font-secondary border-b border-b-white w-full">
             <button
                 className={
                     "text-[25px] hover:text-lily-400 transition-colors duration-300 flex gap-2 items-center px-4 py-1"
