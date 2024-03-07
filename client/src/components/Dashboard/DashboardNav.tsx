@@ -3,7 +3,7 @@ import ProjectNav from "../projects/ProjectNav";
 
 const DashboardNav = () => {
     return (
-        <aside className=" border-r border-r-white grid gap-3 place-items-center w-full ">
+        <aside className="h-full border-r border-r-white grid gap-3 place-items-center w-full ">
             <ProjectIcon title="Axo Project Nexus" img="/axo_little.png" />
             <ProjectNav/>
         </aside>
