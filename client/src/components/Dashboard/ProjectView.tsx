@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import useScreenSize from "../../hooks/useScreenSize";
 import DashboardNav from "./DashboardNav";
+import FilterBar from "../tasks/FilterBar";
 /*
  * This will be the main view when you enter the app (not the loggin or landing page)
  * This component call some other, Like
@@ -19,7 +20,7 @@ const ProjectView = () => {
             })}
         >
             {screenSize.width > 800 ? <DashboardNav /> : ""}
-            <h1>Aqui va el proyecto</h1>
+            <FilterBar />
         </main>
     );
 };
