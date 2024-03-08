@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
+import useScreenSize from "../../hooks/useScreenSize";
 
 interface Props {
     title: string;
@@ -8,12 +9,19 @@ interface Props {
 }
 
 const ProjectIcon = ({ title, img, className }: Props) => {
+    const screenSize = useScreenSize();
     return (
         <article
             className={twMerge(
                 clsx(
                     "container font-secondary flex content-center items-center gap-3 border-b border-b-white py-4",
-                    className
+                    className,
+                    {
+                        "py-10": screenSize.height >= 1023,
+                        "py-8":
+                            screenSize.height <= 1022 &&
+                            screenSize.height > 800,
+                    }
                 )
             )}
         >

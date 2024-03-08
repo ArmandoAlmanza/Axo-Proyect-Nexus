@@ -55,7 +55,10 @@ const ProjectNav = () => {
                     "grid gap-9 place-items-start place-content-center font-secondary border-b border-white w-full",
                     {
                         "py-52": screenSize.height >= 1023,
-                        "py-4": screenSize.height <= 1022,
+                        "py-12":
+                            screenSize.height <= 1022 &&
+                            screenSize.height > 800,
+                        "py-4": screenSize.height <= 800,
                     }
                 )}
             >
