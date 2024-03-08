@@ -12,7 +12,7 @@ const ProjectIcon = ({ title, img, className }: Props) => {
         <article
             className={twMerge(
                 clsx(
-                    "container font-secondary flex content-center items-center gap-3 border-b border-b-white py-8",
+                    "container font-secondary flex content-center items-center gap-3 border-b border-b-white py-4",
                     className
                 )
             )}

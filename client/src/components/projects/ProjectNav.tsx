@@ -11,8 +11,10 @@ import {
     FaInstagram,
 } from "react-icons/fa6";
 import { MdOutlineSettings } from "react-icons/md";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const ProjectNav = () => {
+    const screenSize = useScreenSize();
     const links = [
         {
             title: "Backlog",
@@ -47,8 +49,16 @@ const ProjectNav = () => {
     ];
 
     return (
-        <div className="font-secondary w-full">
-            <nav className="grid gap-9 py-60 place-items-start place-content-center font-secondary border-b border-white w-full">
+        <div className="font-secondary size-full">
+            <nav
+                className={clsx(
+                    "grid gap-9 place-items-start place-content-center font-secondary border-b border-white w-full",
+                    {
+                        "py-52": screenSize.height >= 1023,
+                        "py-4": screenSize.height <= 1022,
+                    }
+                )}
+            >
                 {links.map((link, i) => (
                     <button
                         key={i}
@@ -83,7 +93,7 @@ export default ProjectNav;
 
 const SettingMenu = () => {
     return (
-        <nav className="grid gap-4 py-8 place-items-start place-content-center font-secondary border-b border-b-white w-full">
+        <nav className="grid gap-4 py-4 place-items-start place-content-center font-secondary border-b border-b-white w-full">
             <button
                 className={
                     "text-[25px] hover:text-lily-400 transition-colors duration-300 flex gap-2 items-center px-4 py-1"
