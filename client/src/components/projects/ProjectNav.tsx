@@ -66,9 +66,9 @@ const ProjectNav = () => {
                     <button
                         key={i}
                         className={clsx(
-                            "text-[25px] hover:text-lily-400 transition-colors duration-300 flex gap-2 items-center px-4 py-1",
+                            "text-[25px] rounded-full hover:bg-bluebell-200 transition-colors duration-300 flex gap-2 items-center px-4 py-1",
                             {
-                                "rounded-full bg-bluebell-200": link.active,
+                                "bg-bluebell-200": link.active,
                             }
                         )}
                         onClick={() => {
