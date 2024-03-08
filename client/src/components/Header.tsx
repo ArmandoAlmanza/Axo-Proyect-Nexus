@@ -11,11 +11,9 @@ import useScreenSize from "../hooks/useScreenSize";
 import Button from "./generals/Button";
 import clsx from "clsx";
 import { useState } from "react";
-import useScreenScroll from "../hooks/useScreenScroll";
 import Navbar from "./Navbar";
 const Header = () => {
     const screenSize = useScreenSize();
-    const screenScroll = useScreenScroll();
     const [active, setActive] = useState(false);
     const [menuOpened, setMenuOpened] = useState(false);
     const links = [
@@ -26,11 +24,7 @@ const Header = () => {
     return (
         <header
             className={clsx(
-                "border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary",
-                {
-                    "sticky shadow-lg top-0 z-10 bg-noir-200":
-                        screenScroll > 10,
-                }
+                "border-b border-b-white flex items-center content-center py-2 px-4 justify-evenly gap-2 font-primary sticky shadow-lg top-0 z-10 bg-noir-200"
             )}
         >
             <div className="flex items-center gap-4">

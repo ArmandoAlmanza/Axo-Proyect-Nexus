@@ -24,11 +24,11 @@ const FilterBar = () => {
                                 type="radio"
                                 value=""
                                 name="list-radio"
-                                className="w-4 h-4"
+                                className="w-4 h-4 hover:cursor-pointer"
                             />
                             <label
                                 htmlFor="horizontal-list-radio-license"
-                                className="w-full py-3 ms-2 text-[18px] font-medium text-white"
+                                className="w-full py-3 ms-2 text-[18px] font-medium text-white hover:cursor-pointer"
                             >
                                 Due Date
                             </label>
@@ -41,11 +41,11 @@ const FilterBar = () => {
                                 type="radio"
                                 value=""
                                 name="list-radio"
-                                className="w-4 h-4"
+                                className="w-4 h-4 hover:cursor-pointer"
                             />
                             <label
                                 htmlFor="horizontal-list-radio-id"
-                                className="w-full py-3 ms-2 text-[18px] font-medium text-white"
+                                className="w-full py-3 ms-2 text-[18px] font-medium text-white hover:cursor-pointer"
                             >
                                 Status
                             </label>
@@ -58,11 +58,11 @@ const FilterBar = () => {
                                 type="radio"
                                 value=""
                                 name="list-radio"
-                                className="w-4 h-4"
+                                className="w-4 h-4 hover:cursor-pointer"
                             />
                             <label
                                 htmlFor="horizontal-list-radio-military"
-                                className="w-full py-3 ms-2 text-[18px] font-medium text-white"
+                                className="w-full py-3 ms-2 text-[18px] font-medium text-white hover:cursor-pointer"
                             >
                                 Type
                             </label>
@@ -75,11 +75,11 @@ const FilterBar = () => {
                                 type="radio"
                                 value=""
                                 name="list-radio"
-                                className="w-4 h-4"
+                                className="w-4 h-4 hover:cursor-pointer"
                             />
                             <label
                                 htmlFor="horizontal-list-radio-passport"
-                                className="w-full py-3 ms-2 text-[18px] font-medium text-white"
+                                className="w-full py-3 ms-2 text-[18px] font-medium text-white hover:cursor-pointer"
                             >
                                 Priority
                             </label>
