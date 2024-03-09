@@ -17,10 +17,10 @@ const ProjectView = () => {
     return (
         <main
             className={clsx("grid gap-4", {
-                "grid-cols-[300px,auto]": screenSize.width > 800,
+                "grid-cols-[300px,auto]": screenSize.width > 860,
             })}
         >
-            {screenSize.width > 800 ? <DashboardNav /> : ""}
+            {screenSize.width > 860 ? <DashboardNav /> : ""}
             <div className={
                 clsx(
                     "overflow-y-scroll h-screen no-scrollbar",

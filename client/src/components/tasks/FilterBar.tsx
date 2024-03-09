@@ -10,7 +10,7 @@ const FilterBar = () => {
                 "container": screenSize.width > 850
             })
         }>
-            {screenSize.width < 800 ? (
+            {screenSize.width < 860 ? (
                 <ProjectIcon
                     title="Axo Project Nexus"
                     img=""
