@@ -1,10 +1,15 @@
+import clsx from "clsx";
 import useScreenSize from "../../hooks/useScreenSize";
 import ProjectIcon from "../projects/ProjectIcon";
 
 const FilterBar = () => {
     const screenSize = useScreenSize();
     return (
-        <div className="flex flex-col items-center">
+        <div className={
+            clsx("flex flex-col items-center", {
+                "container": screenSize.width > 850
+            })
+        }>
             {screenSize.width < 800 ? (
                 <ProjectIcon
                     title="Axo Project Nexus"
