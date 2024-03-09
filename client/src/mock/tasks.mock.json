@@ -1,8 +1,14 @@
 [
     {
         "title": "Make mock data",
-        "assigned_by": "Armando Almanza",
-        "assigned_to": "Itzel Geraldine",
+        "assigned_by": {
+            "name": "Armando Almanza",
+            "img": "/avatar.png"
+        },
+        "assigned_to": {
+            "name": "Itzel Geraldine",
+            "img": "/avatar2.png"
+        },
         "status": "started",
         "type": "todo",
         "priority": "normal",
@@ -12,8 +18,14 @@
     },
     {
         "title": "Create The task List",
-        "assigned_by": "Armando Almanza",
-        "assigned_to": "Itzel Geraldine",
+        "assigned_by": {
+            "name": "Armando Almanza",
+            "img": "/avatar.png"
+        },
+        "assigned_to": {
+            "name": "Itzel Geraldine",
+            "img": "/avatar2.png"
+        },
         "status": "completed",
         "type": "meeting",
         "priority": "normal",
@@ -23,8 +35,14 @@
     },
     {
         "title": "Make mock data",
-        "assigned_by": "Armando Almanza",
-        "assigned_to": "Itzel Geraldine",
+        "assigned_by": {
+            "name": "Armando Almanza",
+            "img": "/avatar.png"
+        },
+        "assigned_to": {
+            "name": "Itzel Geraldine",
+            "img": "/avatar2.png"
+        },
         "status": "canceled",
         "type": "issue",
         "priority": "normal",
@@ -34,8 +52,14 @@
     },
     {
         "title": "Make mock data",
-        "assigned_by": "Armando Almanza",
-        "assigned_to": "Itzel Geraldine",
+        "assigned_by": {
+            "name": "Armando Almanza",
+            "img": "/avatar.png"
+        },
+        "assigned_to": {
+            "name": "Itzel Geraldine",
+            "img": "/avatar2.png"
+        },
         "status": "in_progress",
         "type": "todo",
         "priority": "normal",
