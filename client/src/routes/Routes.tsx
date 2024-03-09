@@ -3,7 +3,7 @@ import App from "../App";
 import ErrorPage from "../pages/ErrorPage";
 import Auth from "../pages/Auth";
 import Dashboard from "../pages/Dashboard";
-import ProjectView from "../components/dashboard/ProjectView";
+import ProjectView from "../components/Dashboard/ProjectView";
 
 /* 
     * Here we create the router for our app.

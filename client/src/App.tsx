@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaUsers, FaRegPaperPlane, FaBriefcase } from "react-icons/fa6";
 import useScreenScroll from "./hooks/useScreenScroll";
-import Footer from "./components/Footer";
 import Button from "./components/generals/Button";
 import clsx from "clsx";
 
