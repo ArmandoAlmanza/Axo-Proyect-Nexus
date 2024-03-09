@@ -16,6 +16,8 @@ const TasksList = () => {
                         start_hour="12:30"
                         type={task.type}
                         status={task.status}
+                        assigned_to_img={task.assigned_by.img}
+                        assigned_by_img={task.assigned_to.img}
                     />
                 ))}
             </div>
