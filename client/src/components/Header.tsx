@@ -100,7 +100,7 @@ const Header = () => {
                 <img
                     src={avatar}
                     alt="avatar"
-                    className="3/4 size-9 outline outline-2 outline-inset-2 rounded-3xl hover:cursor-pointer md:size-10 select-none"
+                    className="aspect-4/3 size-9 outline outline-2 outline-inset-2 rounded-3xl hover:cursor-pointer md:size-10 select-none"
                     onClick={() => console.log("click we")}
                 />
             </div>
