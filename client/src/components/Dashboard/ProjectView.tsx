@@ -16,7 +16,7 @@ const ProjectView = () => {
 
     return (
         <main
-            className={clsx("grid gap-4", {
+            className={clsx("grid gap-4 font-secondary", {
                 "grid-cols-[300px,auto]": screenSize.width > 860,
             })}
         >
