@@ -2,7 +2,9 @@ import clsx from "clsx";
 import { FaAngleRight } from "react-icons/fa6";
 import { twMerge } from "tailwind-merge";
 import useScreenSize from "../../hooks/useScreenSize";
-
+import TaskModal from "./TaskModal";
+import { useState } from "react";
+import tasks from "../../mock/tasks.mock.json";
 interface Props {
     title: string;
     start_hour: string;
@@ -20,9 +22,11 @@ const TaskCard = ({
     type,
     status,
     assigned_by_img,
-    assigned_to_img
+    assigned_to_img,
 }: Props) => {
+    const task = tasks[0];
     const screenSize = useScreenSize();
+    const [modalOpen, setModalOpen] = useState(false);
     return (
         <article className="border border-white rounded-md px-4">
             <div
@@ -129,8 +133,12 @@ const TaskCard = ({
                         className="aspect-4/3 size-9 outline outline-2 outline-inset-2 rounded-3xl md:size-10 select-none outline-garnet-200"
                     />
                 </div>
-                <FaAngleRight className="text-[30px] rounded-full border border-white hover:cursor-pointer hover:border-lily-400 hover:text-lily-400 transition-colors duration-300 ease-out" />
+                <FaAngleRight
+                    className="text-[30px] rounded-full border border-white hover:cursor-pointer hover:border-lily-400 hover:text-lily-400 transition-colors duration-300 ease-out"
+                    onClick={() => setModalOpen(true)}
+                />
             </div>
+            <TaskModal open={modalOpen} setOpen={setModalOpen} {...task} />
         </article>
     );
 };
