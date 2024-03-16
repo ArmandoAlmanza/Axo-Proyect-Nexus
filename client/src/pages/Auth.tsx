@@ -51,7 +51,7 @@ const Auth = () => {
                 ) : (
                     ""
                 )}
-
+                
                 {state === "login" ? (
                     <LoginForm state={state} setState={handdleLogin} />
                 ) : (

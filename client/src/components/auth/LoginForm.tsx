@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import Button from "../generals/Button";
 
 interface formProps {
     state: string;
@@ -14,7 +15,7 @@ const LoginForm = ({ setState }: formProps) => {
         setVisible(!visible);
     };
     return (
-        <div className="transition-opacity ease-in-out opacity-100">
+        <>
             <form className="mb-4">
                 <div className="flex flex-col mb-4">
                     <label
@@ -60,17 +61,20 @@ const LoginForm = ({ setState }: formProps) => {
                     )}
                 </div>
                 <button
+                    className="cursor-pointer text-blue-600"
+                    onClick={setState}
+                >
+                    You don't have an account?
+                </button>
+                <Button
                     type="button"
                     onClick={() => navigate("/dashboard")}
                     className="bg-black text-white px-2 py-1 mx-auto block w-36 transition-colors hover:bg-violet-400 hover:text-black duration-500"
                 >
-                    Log in
-                </button>
+                    <span>Log in</span>
+                </Button>
             </form>
-            <button className="cursor-pointer text-blue-600" onClick={setState}>
-                You don't have an account?
-            </button>
-        </div>
+        </>
     );
 };
 
