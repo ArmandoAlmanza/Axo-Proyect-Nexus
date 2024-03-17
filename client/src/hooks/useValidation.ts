@@ -5,7 +5,7 @@ const useValidation = () => {
             emailRegex: /^[a-zA-Z0-9.]+@[a-zA-Z0-9-]+.(com|mx)$/,
         },
         password: {
-            regex: /^[^<>]+$/,
+            regex: /^[^<>\s\\]+$/,
             minLength: 8,
         },
     };
