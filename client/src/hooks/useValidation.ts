@@ -1,7 +1,7 @@
 const useValidation = () => {
     const validationParams = {
         user: {
-            nameRegex: /^[a-zA-Z0-9]+$/,
+            nameRegex: /^[a-zA-Z0-9\s]+$/,
             emailRegex: /^[a-zA-Z0-9.]+@[a-zA-Z0-9-]+.(com|mx)$/,
         },
         password: {
