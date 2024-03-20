@@ -39,6 +39,20 @@ const LoginForm = ({ setState }: formProps) => {
               });
     };
 
+    const handleButtonClick = () => {
+        if (!isValid.user) {
+            alert("The email is invalid");
+            return;
+        }
+        if (!isValid.password) {
+            alert("The password is incorrect");
+            return;
+        }
+
+        alert("All good, welcome");
+        setTimeout(() => navigate("/dashboard"), 2000);
+    };
+
     return (
         <>
             <form className="mb-4">
@@ -85,11 +99,7 @@ const LoginForm = ({ setState }: formProps) => {
                 </button>
                 <Button
                     type="button"
-                    onClick={() =>
-                        isValid.user && isValid.password
-                            ? setTimeout(() => navigate("/dashboard"), 2000)
-                            : alert("user or password invalid")
-                    }
+                    onClick={handleButtonClick}
                     className="bg-black text-white px-1 py-2 mx-auto w-3/4 transition-colors hover:bg-violet-400 hover:text-black duration-500 flex items-center content-center mt-2"
                 >
                     <span className="text-[20px]">Log In</span>
