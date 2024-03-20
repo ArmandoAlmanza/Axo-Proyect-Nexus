@@ -25,15 +25,17 @@ const LoginForm = ({ setState }: formProps) => {
     const navigate = useNavigate();
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setUserInfo({ ...userInfo, [event.target.name]: event.target.value });
-        event.target.name === "email"
+        const { name, value } = event.target;
+        setUserInfo({ ...userInfo, [name]: value });
+
+        name === "email"
             ? setIsValid({
                   ...isValid,
-                  user: userValidation(event.target.value, "email"),
+                  user: userValidation(value, "email"),
               })
             : setIsValid({
                   ...isValid,
-                  password: passValidation(event.target.value),
+                  password: passValidation(value),
               });
     };
 
