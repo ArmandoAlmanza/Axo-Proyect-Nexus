@@ -2,7 +2,6 @@ package com.axo.axosftware.Models;
 
 import java.time.LocalDate;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -26,9 +25,6 @@ public class Profile {
 
 	private LocalDate birthdate;
 	private String img;
-
-	@Transient
-	private MultipartFile image;
 
 	@OneToOne
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
