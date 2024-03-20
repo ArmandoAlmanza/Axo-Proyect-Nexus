@@ -16,5 +16,5 @@ public interface ProfileService {
 
     Optional<Profile> delete(String id);
 
-    Optional<UserProfileProjection> findUserProfiles(String id);
+    Optional<UserProfileProjection> findUserProfiles(String email);
 }

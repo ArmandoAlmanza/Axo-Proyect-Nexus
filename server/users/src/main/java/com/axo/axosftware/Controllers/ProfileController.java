@@ -24,9 +24,9 @@ public class ProfileController {
 	@Autowired
 	private ProfileService profileService;
 
-	@GetMapping("user/{id}")
-	public Optional<UserProfileProjection> profiles(@PathVariable String id) {
-		return profileService.findUserProfiles(id);
+	@GetMapping("user/{email}")
+	public Optional<UserProfileProjection> profiles(@PathVariable String email) {
+		return profileService.findUserProfiles(email);
 	}
 
 	@GetMapping("")

@@ -23,8 +23,6 @@ public class ProfileServiceImpl implements ProfileService {
 		return (List<Profile>) profileRepository.findAll();
 	}
 
-	// Otros métodos según sea necesario
-
 	@SuppressWarnings("null")
 	@Override
 	public Optional<Profile> findById(String id) {
@@ -46,7 +44,7 @@ public class ProfileServiceImpl implements ProfileService {
 	}
 
 	@Override
-	public Optional<UserProfileProjection> findUserProfiles(String id) {
-		return profileRepository.findUserProfiles(id);
+	public Optional<UserProfileProjection> findUserProfiles(String email) {
+		return profileRepository.findUserProfiles(email);
 	}
 }

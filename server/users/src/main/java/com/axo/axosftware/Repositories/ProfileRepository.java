@@ -11,6 +11,6 @@ import com.axo.axosftware.Models.Profile;
 public interface ProfileRepository extends CrudRepository<Profile, String> {
 
 	@Query(value = "SELECT * FROM get_user_info(?1)", nativeQuery = true)
-	Optional<UserProfileProjection> findUserProfiles(String id);
+	Optional<UserProfileProjection> findUserProfiles(String email);
 
 }
