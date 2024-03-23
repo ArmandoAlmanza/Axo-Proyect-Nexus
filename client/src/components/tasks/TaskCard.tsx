@@ -33,7 +33,7 @@ const TaskCard = ({
                 className={clsx(
                     "grid place-items-center place-content-center my-3 gap-4",
                     {
-                        "grid-cols-[1fr_10px_1fr_85px_125px_1fr_100px]":
+                        "grid-cols-[120px_10px_1fr_95px_125px_1fr_50px]":
                             screenSize.width >= 760,
                         "grid-cols-[1fr_10px_1fr_1fr_30px]":
                             screenSize.width < 760,
@@ -121,7 +121,11 @@ const TaskCard = ({
                             : status.toUpperCase()}
                     </span>
                 )}
-                <div className="flex justify-between gap-3">
+                <div
+                    className={clsx("flex justify-between gap-3", {
+                        "flex-col": screenSize.width < 760,
+                    })}
+                >
                     <img
                         src={assigned_to_img}
                         alt="assigned by image"
