@@ -1,21 +1,10 @@
-import { Dispatch, SetStateAction } from "react";
 import Button from "../generals/Button";
 import clsx from "clsx";
 import useScreenSize from "../../hooks/useScreenSize";
 import { FaTimes } from "react-icons/fa";
+import { TaskModalProps } from "../../interfaces/tasks";
 
-interface Props {
-    open: boolean;
-    setOpen: Dispatch<SetStateAction<boolean>>;
-
-    title: string;
-    description: string;
-    status: string;
-    end_date: string;
-    start_date: string;
-}
-
-const TaskModal = ({ open, setOpen, ...props }: Props) => {
+const TaskModal = ({ open, setOpen, ...props }: TaskModalProps) => {
     const screenSize = useScreenSize();
     return (
         <div
@@ -39,18 +28,72 @@ const TaskModal = ({ open, setOpen, ...props }: Props) => {
             >
                 <FaTimes />
             </Button>
-            <div className="border border-noir-200 p-4 w-full h-[400px] shadow-sm shadow-noir-200 rounded-[15px] grid md:grid-cols-2 gap-4 items-start">
-                <div className="flex gap-2 items-end">
-                    <h3 className="font-bold text-[20px]">Title:</h3>
-                    <p className="text-[20px]">{props.title}</p>
+            <div className="bg-[#fefefe] rounded-[15px] grid gap-4 place-items-start place-content-center">
+                <div className="grid place-items-start w-full">
+                    <h1 className="text-[35px] font-bold">{props.title}.</h1>
+                    <div className="flex justify-between gap-4">
+                        <p className="text-[15px]">
+                            This tasks is:{" "}
+                            <span
+                                className={clsx("font-bold", {
+                                    "text-dalia-200":
+                                        props.status === "started",
+                                    "text-bluebell-200":
+                                        props.status === "in_progress",
+                                    "text-leaf-200":
+                                        props.status === "completed",
+                                    "text-garnet-200":
+                                        props.status === "canceled",
+                                })}
+                            >
+                                {props.status}
+                            </span>
+                        </p>
+                        <div className="flex gap-6">
+                            <p>{props.start_date}</p>
+                            <p>{props.end_date}</p>
+                        </div>
+                    </div>
+                    <div className="flex justify-between gap-4 mt-3">
+                        <div className={
+                            clsx("flex flex-col items-center justify-between gap-3",
+                            {
+                                "flex-row":screenSize.width > 760
+                            })
+                        }>
+                            <p>
+                                Assigned to:{" "}
+                                <span>{props.assigned_to.name}</span>{" "}
+                            </p>
+
+                            <img
+                                className="aspect-4/3 size-9 outline outline-2 outline-inset-2 rounded-3xl md:size-10 select-none"
+                                src={props.assigned_to.img}
+                                alt="assigned to image"
+                            />
+                        </div>
+                        <div className={
+                            clsx("flex flex-col items-center justify-between gap-3",
+                            {
+                                "flex-row":screenSize.width > 760
+                            })
+                        }>
+                            <p>
+                                Assigned by:{" "}
+                                <span>{props.assigned_to.name}</span>{" "}
+                            </p>
+
+                            <img
+                                className="aspect-4/3 size-9 outline outline-2 outline-inset-2 rounded-3xl md:size-10 select-none outline-garnet-200"
+                                src={props.assigned_by.img}
+                                alt="assigned to image"
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div className="flex flex-col gap-2 items-start w-full">
                     <h3 className="font-bold text-[20px]">Description:</h3>
-                    <textarea
-                        className="resize-none border border-noir-200 p-2 h-[200px] w-full outline-none"
-                        value={props.description}
-                        readOnly
-                    />
+                    <p className="text-left">{props.description}</p>
                 </div>
             </div>
         </div>
